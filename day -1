@@ -47,3 +47,27 @@ int main() {
     cout << isEqui << endl;
     return 0;
 }
+
+
+
+// Problem4 Problem4
+// swap values of 2 vARIABLES USING 3RD VARIABLES 
+
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a;
+    int b;
+    
+    cin>> a>> b;
+    //swaping logical
+    int temp = a;
+    a =b;
+    b = temp;
+    
+    cout<< a << "\n" << b << endl;
+    return 0;
+    
+}
