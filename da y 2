@@ -34,3 +34,170 @@ int main() {
     return 0;
 }
 
+
+// probleem 3
+// Problem 1 -- If condition 
+// to verify user's age wether eligible for vote or not ?
+#include <iostream>
+using namespace std;
+
+int main() {
+    int age;
+    cin >> age;
+    
+    
+    if (age >=18) {
+        if (age >= 100){
+            cout <<"eligible for vote (but we are super senior citizen)";
+            
+        }else {
+            cout << "eligible for vote";
+            
+        }
+        
+    }else {
+        if(age < 0){
+            cout << "enter a valid age";
+            
+        }else {
+            cout << "not a eligible for vote";
+        }
+    }
+   
+    return 0;
+}
+
+
+
+// problem 4----ternary operator
+// find the greater number among 2
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int a,b;
+    int max_Number;
+    
+    cin >>a>>b;
+    
+    // ternary operator
+    
+    max_Number = a>b ? a:b;
+    cout << max_Number;
+    
+    return 0;
+}
+
+
+// problem 5 ---continue statements
+// print 1 to n and avoid those numbers which are divisible by 3 
+
+#include<iostream>
+ using namespace std;
+ 
+ int main(){
+     
+     int n;
+     cin >> n;
+     for (int i = 1; i<=n; i++){
+         if(i %3 == 0){
+             continue;
+             
+         }
+         cout << i << " ";
+         
+     }
+        cout << "\n";
+     return 0;
+ }
+
+
+
+
+// problem 6---break statements
+// we have to add number until we get a negative number
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n;
+    int sum = 0;
+    
+    while(true){
+        cin >> n;
+        
+        if(n<0){
+            break;
+            
+        }
+        sum = sum +n;
+        
+        
+    }
+    cout << sum;
+     return 0;
+}
+
+
+// problem 7--- smart home lighting ststem
+
+#include<iostream>
+using namespace std;
+int main(){
+    string dayOrNight;
+    bool motionDetected;
+    
+    cout << "Is it day or night? ";
+    cin >> dayOrNight;
+    cout << "Is motion detected? (1 for Yes, 0 for No): ";
+    cin >> motionDetected;
+    
+    if(dayOrNight == "Night" || dayOrNight == "night" || dayOrNight == "NIGHT"){
+        if(motionDetected){
+            cout << "Turn on LED light with 100% brightness.." << endl;
+        } else {
+            cout << "Turn on LED light with only 10% brightness.." << endl;
+        }
+    } else {
+        cout << "Turn off the lights..." << endl;
+    }
+    
+    return 0;
+}
+
+
+// problem 8---
+// customer support IVR system
+// 1-- for support 
+//2-- for billing
+//3-- for technical issues
+//4-- talk to the agent
+
+#include<iostream>
+using namespace std;
+
+int main(){
+    int choice;
+    cin >> choice;
+    
+    switch(choice){
+        case 1:
+        cout << "transfer the call to the customer support";
+        break;
+        case 2:
+        cout << "tranfer call to billing and accounts..";
+        break;
+        case 3:
+        cout << " connecting to our technical help desk..";
+        break;
+        case4:
+        cout << " connecting call to the agent";
+        break;
+        default:
+        cout << "it is a in valid selection , enter a valid number";
+    }
+    return 0;
+    
+}
