@@ -1,0 +1,167 @@
+//problem 1---
+//Access specifier
+// 7.2---public
+
+// #include <iostream>
+// using namespace std;
+
+// class BandAccount{ 
+    
+//     private: 
+//     int balance = 50;   
+//     public:
+
+//     void showBalance(){
+//     cout << "Balance in your account is:" << balance;
+    
+// }
+// };
+// int main(){
+//     BandAccount myaccount;
+//     myaccount.showBalance();
+    
+    
+
+//     return 0;
+// }
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+//problem 7.3---
+// Access specifier
+
+#include <iostream>
+using namespace std;
+
+class Parent {
+    protected :
+    
+    
+    int secretCode = 1234;
+    
+};
+
+class child : public Parent{
+    public:
+    void accessOfSecretCode(){
+        cout<< "secretCodeof the locker" << secretCode;
+    }
+    
+};
+
+int main(){
+    child obj1;
+    obj1.accessOfSecretCode();
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//Problem 3 -- Access Specifier
+//Use all the access specifiers in one program
+
+#include <iostream>
+using namespace std;
+
+class Bank{
+    public:
+    string name = "LAXMI CHIT FUND \n"; 
+    void showBalance(){
+        cout << "Your balance is: " << balance;
+    }
+    
+    private: 
+    int balance = 22;
+    
+    protected:
+    int pin = 2048;
+};
+
+class Child : public Bank{
+    public:
+    void accessOfPin(){
+        cout << "\nYour Account Pin is: " << pin;
+    }
+};
+
+
+
+int main()
+{
+    Bank b;
+    cout << b.name;
+    b.showBalance();
+    Child c;
+    c.accessOfPin();
+    
+    
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//2.1 --default            
+            
+#include<iostream>
+using namespace std;
+class wifiConnection {
+    public:
+    
+    string networkName;
+    string password;
+    
+    
+    wifiConnection(){
+        networkName = "acitfiber";
+        password = "bjp";
+    }
+    
+    public:
+    void showDetails(){
+        cout << "Network name is :" << networkName << "\n" << "and its password is :" << password;
+        
+    }
+};
+
+int main(){
+    wifiConnection obj1;
+    obj1.showDetails();
+    
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// 2.2--parameterized constructor---
+
+#include<iostream>
+using namespace std;
+
+class Student {
+    public :
+    
+    string name ;
+    int Id;
+    
+    Student(string studentsName , int studentId){
+        name = studentsName;
+        Id =studentId;
+    }
+    void displayDetails(){
+        cout << name << Id;
+        
+    }
+};
+
+int main(){
+    Student std1("Ravi ", 2193);
+    std1.displayDetails();
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
