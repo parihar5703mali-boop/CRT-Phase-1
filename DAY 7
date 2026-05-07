@@ -165,3 +165,49 @@ int main(){
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//problem 3---
+// Pillar of OOps 
+// Encapsulation..= we are binding the data into a single unit (function, data, variable, method)
+//into a single unit called class and making some restrictions on this class members..
+// Data security
+//Controlled access over my Data// validation before accessing the data
+// code matainablity
+
+#include<iostream>
+using namespace std;
+
+class bankAccount{
+    private:
+    int balance;
+
+    
+    public:
+    void setBalance(int amount){
+        
+        if(amount >=0){
+            balance = amount;
+            
+        } else{
+            cout << "enter sa valid number..";
+        }
+    }
+    
+    public:
+    int getBalance(){
+        return balance;
+    }
+};
+
+
+
+int main(){
+    bankAccount obj1;
+    obj1.setBalance(5.95);
+    cout<< obj1.getBalance();
+    
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
