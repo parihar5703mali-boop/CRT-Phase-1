@@ -222,7 +222,89 @@ int main(){
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 
+//Types of polymorphism -- 2.1 
+//function overloading
 
+#include <iostream>
+using namespace std;
+
+class Multiply{
+    public:
+    int multiply(){
+        cout << "you have entered no numbers to multiply";
+        return 0;
+    }
+    
+    double multiply(double a, double b){
+        return a*b;
+    }
+    
+    int multiply(int a, int b, int c){
+        return a*b*c;
+    }
+};
+
+int main()
+{
+    Multiply mul;
+    
+    cout << mul.multiply() << "\n";
+    
+    cout << mul.multiply(5.4, 6.9) << "\n";
+    
+    cout << mul.multiply(5, 4, 3);
+    
+    return 0;
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//types pf polymorphism---2.2---
+// function overriding
+
+#include<iostream>
+using namespace std;
+
+
+class Animal{
+     virtual void sound(){
+        cout <<"Animals makes sound";
+    }
+    
+    
+};
+
+class Dog: public Animal{
+    public:
+    
+    void sound() override {
+        cout <<"Dog makes sound" << "\n";
+    
+    }
+    
+};
+
+
+class Cat : public Animal{
+    public :
+    
+    void sound() override {
+        cout <<"Cat makes sound" << "\n";
+    }
+    
+};
+
+
+int main() {
+    Dog d;
+    Cat c;
+    d.sound();
+    c.sound();
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
